@@ -1,0 +1,50 @@
+# Python 관련
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+*.swo
+*.egg-info/
+*.eggs/
+
+# 환경 설정 파일
+.env
+.env.*  # 예: .env.local, .env.production
+venv/  # 로컬 가상환경 폴더
+.idea/  # PyCharm과 같은 IDE 설정
+.vscode/  # VS Code 설정
+
+# 빌드 관련
+build/
+dist/
+*.log  # 로그 파일
+
+# Docker 관련 (사용 시)
+*.dockerignore
+docker-compose.override.yml
+
+# 운영체제별 임시 파일
+.DS_Store
+Thumbs.db
+
+# Vercel 또는 기타 CI/CD 관련
+.vercel/  # 로컬 Vercel 설정 폴더
+output/  # 일부 빌드 프로세스에서 생성되는 폴더
+
+# 테스트 커버리지 결과
+.coverage
+*.coverage
+htmlcov/
+.nox/
+pytest_cache/
+.tox/
+
+# MyPy와 같은 정적 분석 도구
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# 기타
+*.pid  # 프로세스 ID 파일
+*.sqlite3  # SQLite 데이터베이스 파일 (예: 테스트용)
