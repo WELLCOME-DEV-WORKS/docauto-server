@@ -1,11 +1,15 @@
+# main.py
 from fastapi import FastAPI
+from app.routers import home, doc_generator, other_feature
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello, FastAPI on Vercel!"}
+# 다른 라우터 등록
+app.include_router(home.router)
+app.include_router(doc_generator.router, prefix="/docs", tags=["Document"])
+app.include_router(other_feature.router, prefix="/features", tags=["Feature"])
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: str = None):
-    return {"item_id": item_id, "q": q}
+
+@app.get("/")
+def root():
+    return {"message": "Welcome to FastAPI Application"}
